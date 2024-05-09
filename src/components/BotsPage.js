@@ -30,7 +30,7 @@ function BotsPage() {
 
   // Handle discharging bot from myArmy or from Bots Array(delete bot)
   function handleDelete(bot) {
-    fetch(` http://localhost:8002/bots/${bot.id}`, {
+    fetch(` https://njagi-g.github.io/Bot-Battlr-Deploy-/db.json/${bot.id}`, {
       method: "DELETE",
     }).then(() => {
       setBots((bots) => bots.filter((selection) => selection.id !== bot.id));
