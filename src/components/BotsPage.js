@@ -10,9 +10,9 @@ function BotsPage() {
   // Passing in a callback function to run as sideEffect
   // The callback returns a fetch request
   useEffect(() => {
-    fetch("http://localhost:8002/bots")
+    fetch("https://njagi-g.github.io/Bot-Battlr-Deploy-/db.json")
       .then((res) => res.json())
-      .then((data) => setBots(data));
+      .then((data) => setBots(data.bots));
   }, []);
 
   // Handle Enlisting bot to myArmy only once
